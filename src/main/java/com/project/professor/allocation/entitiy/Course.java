@@ -1,6 +1,11 @@
 package com.project.professor.allocation.entitiy;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
     private Long id;
     private String name;
 

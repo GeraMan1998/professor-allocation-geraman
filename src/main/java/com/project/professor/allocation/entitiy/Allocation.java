@@ -1,7 +1,9 @@
 package com.project.professor.allocation.entitiy;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.time.DayOfWeek;
 import java.util.Date;
-
+@Entity
 public class Allocation {
     public Long getId() {
         return id;
@@ -50,7 +52,7 @@ public class Allocation {
     public void setProfessorId(Long professorId) {
         this.professorId = professorId;
     }
-
+@Id
     private Long id;
     private DayOfWeek day;
     private Date start;
