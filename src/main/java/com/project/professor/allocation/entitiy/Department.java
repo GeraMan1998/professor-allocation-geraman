@@ -1,13 +1,14 @@
 package com.project.professor.allocation.entitiy;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Department {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(unique = true,nullable = false)
 
     public Long getId() {
         return id;
